@@ -49,4 +49,4 @@ INSERT into restaurants (name, website, phone, tags, price, address_line1, addre
 VALUES ("Gogi Time", 'http://gogitime.com/', '(510) 834-5757', 'Korean, AYCE', '$$', '2600 Telegraph Ave', NULL, '94612', 'Oakland', 'CA', 4.4);
 
 INSERT into pictures (url, helpful, not_helpful, restaurant_id, users_id)
-VALUES ("19th St/Oakland", 0, 0, 1, 1);
+VALUES ("https://s3.ap-northeast-2.amazonaws.com/pleyland/Both.png", 0, 0, 1, 1);
