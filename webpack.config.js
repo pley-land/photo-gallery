@@ -3,9 +3,9 @@ const path = require('path');
 
 module.exports = {
   context: __dirname + '/client',
-  entry: './index.js',
+  entry: '/Users/Steven/photo-gallery/client/index.js',
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
