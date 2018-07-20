@@ -1,36 +1,135 @@
-DROP DATABASE IF EXISTS pley;
+var files = `1.jpg	16.jpeg	22.jpg	29.jpg	35.jpg	41.jpg	49.jpg	55.jpg	61.jpg	68.jpg	74.jpg	80.jpg	10.jpg	17.jpg	23.jpg	3.jpg	36.jpg	42.jpg	5.jpg	56.jpg	62.jpg	69.jpg	75.jpg	81.png	11.jpg	18.jpg	24.jpg	30.jpg	37.jpg	43.jpg	50.jpg	57.jpg	63.jpg	7.jpg	76.jpg	9.jpg	12.jpg	19.jpg	25.jpg	31.jpg	38.jpg	45.jpg	51.jpg	58.jpg	64.jpg	70.jpg	77.jpg	13.jpg	2.jpg	26.jpg	32.jpg	39.jpg	46.jpg	52.jpg	59.jpg	65.jpg	71.jpg	78.jpg	14.jpg	20.jpg	27.jpg	33.jpg	4.jpg	47.jpg	53.jpg	6.jpg	66.jpg	72.jpg	79.jpg	15.jpeg	21.jpg	28.jpg	34.jpg	40.jpg	48.jpg	54.jpg	60.jpg	67.jpg	73.jpg	8.jpg`.split('	');
+var restaurants = [`Gogi Time `,
+`Boba Guys`,
+`Chipotle`,
+`Fork & Spoon`,
+`Halal Guys`,
+`EighTea`,
+`Burger King`,
+`In-n-Out`,
+`Popeyes`,
+`Tu Lan`,
+`KFC`,
+`Chick-fil-a`,
+`Blind Tiger`,
+`Wendy's`,
+`A&W`,
+`Rooster & Rice`,
+`Shakewell`,
+`Flipside`,
+`Urban Tavern`,
+`707 Sutter`,
+`Momofuku`,
+`Roaring Fork `,
+`Ippudo`,
+`The Melt`,
+`BunMee`,
+`Pei Wei `,
+`The Cavalier`,
+`Dirty Habit`,
+`Lin Jia Asian Kitchen`,
+`Colonial Donuts`,
+`Oakland Kosher Foods`,
+`Rolling Dunes`,
+`Grand Lake Kitchen`,
+`Soba Ichi`,
+`Proposition Chicken`,
+`Qi Dumpling Lounge`,
+`Warren's Webpack Bananza`,
+`Arizmendi Bakery`,
+`The Star on Grand`,
+`Holy Land Restuarant`,
+`Cheese Steak Shop`,
+`Anson's Handsome Hamburgers`,
+`Belcampo Restuarant & Butcher Shop`,
+`Daily Grill`,
+`Morton's The Steakhouse`,
+`The Mark `,
+`California Pizza Kitchen`,
+`Ikaros Greek Restuarant`,
+`Modigliani Cafe`,
+`JJ Burger`,
+`Sliver`,
+`Lakeshore Cafe`,
+`Belly`,
+`Lovely's`,
+`Mua`,
+`Flavor of India`,
+`Dosirak Shop`,
+`Super Duper Burgers`,
+`Hancook`,
+`Chan's Kitchen`,
+`Steven's Slow Today Deli `,
+`Aisle 5`,
+`CANA Cuban Parlor & Cafe`,
+`Homeroom`,
+`Justin's Koolaid Bar`,
+`CHICA Oakland`,
+`Penrose`,
+`Mockingbird`,
+`Wally's Cafe`,
+`Orchid Pavillion Cafe`,
+`Fogo de Chao`,
+`The Grove`,
+`Michael's Romantic Bulgogi Beef`,
+`Belotti Ristorante`,
+`Tacolicious`,
+`The Hog's Apothecary`,
+`Tim Ho Wan`,
+`Postino's `,
+`The Melting Pot`,
+`Rubio's`,
+`Bonchon `,
+`MOD Pizza`,
+`Wingstop `,
+`Tempest`,
+`Playland`,
+`Raven `,
+`Temple`,
+`Hawthorne`,
+`The Yellow Submarine`,
+`Subway`,
+`Umami Burger`,
+`Asian Box`,
+`Hopscotch`,
+`Shogun Japanese Sushi`,
+`Shane is Li's bestfriend`,
+`Champa Garden`,
+`Southern Cafe`,
+`Jong Ga House`,
+`Sidebar Oaktown`,
+`Mua`];
 
-CREATE DATABASE pley;
+var createRestaurantInsert = (restaurants) => {
+	var insertStatement = '';
+	for (let i = 0; i < restaurants.length; i++) {
+		insertStatement += `INSERT INTO restaurants (name) VALUES ("${restaurants[i]}");\n`;
+	}
+	return insertStatement;
+};
 
-USE pley;
+var createPictureInsert = (pictures, restaurants) => {
+	var url = 'https://s3.ap-northeast-2.amazonaws.com/pleyland/';
+	var insertStatement = '';
+	var helpful;
+	var notHelpful;
+	for (let i = 1; i < restaurants.length + 1; i++) {
+		for (let j = 0; j < 3; j++) {
+			var randPictureIndex = Math.floor(Math.random() * (pictures.length - 1));
+			helpful = Math.floor(Math.random() * (15));
+			notHelpful = Math.floor(Math.random() * (15));
+			insertStatement += `INSERT INTO pictures (url, helpful, not_helpful, restaurant_id) VALUES ("${url}${pictures[randPictureIndex]}", ${helpful}, ${notHelpful}, ${i});\n`;
+		}
+	}
+	return insertStatement;
+};
 
+createRestaurantInsert(restaurants);
 
--- CREATE TABLE users (
--- 	id INT NOT NULL AUTO_INCREMENT,
--- 	username varchar(100) NOT NULL,
--- 	profile_picture varchar(100),
--- 	location varchar(50),  
--- 	PRIMARY KEY(id)
--- );
+createPictureInsert(files, restaurants);
 
-CREATE TABLE restaurants (
-	id int NOT NULL AUTO_INCREMENT,
-	name varchar(50) NOT NULL,
-	PRIMARY KEY (id)
-);
-
-CREATE TABLE pictures (
-	id int NOT NULL AUTO_INCREMENT,
-	url varchar(200) NOT NULL,
-	helpful int NOT NULL,
-	not_helpful int NOT NULL,
-	restaurant_id int NOT NULL,
-	-- users_id int NOT NULL,
-	PRIMARY KEY (id),
-	-- FOREIGN KEY (users_id) REFERENCES users(id) ON DELETE CASCADE,
-	FOREIGN KEY (restaurant_id) REFERENCES restaurants(id) ON DELETE CASCADE
-);
-
+// Restaurants
+/*
 INSERT INTO restaurants (name) VALUES ("Gogi Time ");
 INSERT INTO restaurants (name) VALUES ("Boba Guys");
 INSERT INTO restaurants (name) VALUES ("Chipotle");
@@ -131,7 +230,10 @@ INSERT INTO restaurants (name) VALUES ("Southern Cafe");
 INSERT INTO restaurants (name) VALUES ("Jong Ga House");
 INSERT INTO restaurants (name) VALUES ("Sidebar Oaktown");
 INSERT INTO restaurants (name) VALUES ("Mua");
+*/
 
+// Pictures
+/*
 INSERT INTO pictures (url, helpful, not_helpful, restaurant_id) VALUES ("https://s3.ap-northeast-2.amazonaws.com/pleyland/19.jpg", 3, 3, 1);
 INSERT INTO pictures (url, helpful, not_helpful, restaurant_id) VALUES ("https://s3.ap-northeast-2.amazonaws.com/pleyland/70.jpg", 9, 9, 1);
 INSERT INTO pictures (url, helpful, not_helpful, restaurant_id) VALUES ("https://s3.ap-northeast-2.amazonaws.com/pleyland/50.jpg", 6, 2, 1);
@@ -432,3 +534,5 @@ INSERT INTO pictures (url, helpful, not_helpful, restaurant_id) VALUES ("https:/
 INSERT INTO pictures (url, helpful, not_helpful, restaurant_id) VALUES ("https://s3.ap-northeast-2.amazonaws.com/pleyland/6.jpg", 4, 10, 100);
 INSERT INTO pictures (url, helpful, not_helpful, restaurant_id) VALUES ("https://s3.ap-northeast-2.amazonaws.com/pleyland/75.jpg", 8, 13, 100);
 INSERT INTO pictures (url, helpful, not_helpful, restaurant_id) VALUES ("https://s3.ap-northeast-2.amazonaws.com/pleyland/20.jpg", 14, 14, 100);
+*/
+
