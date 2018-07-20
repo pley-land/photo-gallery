@@ -1,13 +1,8 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: debian:stretch
+    docker: # See https://docs.docker.com/get-started/#docker-concepts if you are new to Docker.
+      - image: circleci/ruby:2.4.1-jessie
     steps:
       - checkout
-      - run:
-          name: Greeting
-          command: echo Hello, world.
-      - run:
-          name: Print the Current Time
-          command: date
+      - run: echo "A first hello"
