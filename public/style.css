@@ -1,0 +1,78 @@
+.centered {
+	display: inline-block;
+    z-index: 100;
+    position:absolute;
+    color: white;
+}
+
+#top {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-style: solid;
+    border-color: red;
+    height: 400px;
+    width: 1200px;
+  	resize: vertical;
+  	overflow: auto;
+  	align-items: center;
+  	justify-content: space-evenly;
+}
+
+#map {
+    border-style: solid;
+    border-color: red;
+    height: 300px;
+    width: 400px;
+    text-align: center;
+  	resize: vertical;
+  	overflow: auto;
+}
+
+#photo-gallery {
+	display: flex;
+    /*border-style: solid;*/
+    /*border-color: red;*/
+    height: 220px;
+    width: 690px;
+    flex-direction: row;
+  	align-items: center;
+  	justify-content: space-evenly;
+}
+
+#photo1 {
+    /*border-style: solid;*/
+    /*border-color: green;*/
+    height: 220px;
+    width: 220px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#photo2 {
+    /*border-style: solid;*/
+    /*border-color: blue;*/
+    height: 250px;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#photo3 {
+	position:relative;
+	display: flex;
+    /*border-style: solid;*/
+    /*border-color: yellow;*/
+    height: 220px;
+    width: 220px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+img {
+	max-width:auto;
+	max-height:100%;
+}
