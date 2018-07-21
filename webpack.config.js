@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   context: __dirname + '/client',
-  entry: '/Users/Steven/photo-gallery/client/index.js',
+  entry: __dirname + '/client/index.jsx',
   module: {
     rules: [
       {
@@ -19,5 +19,6 @@ module.exports = {
   output: {
     path: __dirname + '/public',
     filename: 'app.js',
-  }
+  },
+  watch: true
 };
