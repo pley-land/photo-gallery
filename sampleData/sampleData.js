@@ -101,28 +101,28 @@ var restaurants = [`Gogi Time `,
     `Mua`
 ];
 
-var createRestaurantInsert = (restaurants) => {
-    var insertStatement = '';
-    for (let i = 0; i < restaurants.length; i++) {
-        insertStatement += `INSERT INTO restaurants (name) VALUES ("${restaurants[i]}");\n`;
-    }
-    return insertStatement;
+const createRestaurantInsert = (restaurants) => {
+  let insertStatement = '';
+  for (let i = 0; i < restaurants.length; i += 1) {
+    insertStatement += `INSERT INTO restaurants (name) VALUES ("${restaurants[i]}");\n`;
+  }
+  return insertStatement;
 };
 
-var createPictureInsert = (pictures, restaurants) => {
-    var url = 'https://s3.ap-northeast-2.amazonaws.com/pleyland/';
-    var insertStatement = '';
-    var helpful;
-    var notHelpful;
-    for (let i = 1; i < restaurants.length + 1; i++) {
-        for (let j = 0; j < 3; j++) {
-            var randPictureIndex = Math.floor(Math.random() * (pictures.length - 1));
-            helpful = Math.floor(Math.random() * (15));
-            notHelpful = Math.floor(Math.random() * (15));
-            insertStatement += `INSERT INTO pictures (url, helpful, not_helpful, restaurant_id) VALUES ("${url}${pictures[randPictureIndex]}", ${helpful}, ${notHelpful}, ${i});\n`;
-        }
+const createPictureInsert = (pictures, restaurants) => {
+  const url = 'https://s3.ap-northeast-2.amazonaws.com/pleyland/';
+  let insertStatement = '';
+  let helpful;
+  let notHelpful;
+  for (let i = 1; i < restaurants.length + 1; i += 1) {
+    for (let j = 0; j < 3; j += 1) {
+      const randPictureIndex = Math.floor(Math.random() * (pictures.length - 1));
+      helpful = Math.floor(Math.random() * (15));
+      notHelpful = Math.floor(Math.random() * (15));
+      insertStatement += `INSERT INTO pictures (url, helpful, not_helpful, restaurant_id) VALUES ("${url}${pictures[randPictureIndex]}", ${helpful}, ${notHelpful}, ${i});\n`;
     }
-    return insertStatement;
+  }
+  return insertStatement;
 };
 
 createRestaurantInsert(restaurants);
