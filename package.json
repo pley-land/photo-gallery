@@ -9,6 +9,7 @@
   "scripts": {
     "start": "nodemon ./server/server.js",
     "webpack": "webpack",
+    "test": "jest",
     "build": "webpack --mode production"
   },
   "dependencies": {
@@ -26,6 +27,8 @@
     "webpack": "^4.16.1"
   },
   "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-airbnb-base": "^13.0.0",
@@ -33,6 +36,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
+    "jest-enzyme": "^6.0.2",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.1.0"
   },
