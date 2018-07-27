@@ -1,3 +1,6 @@
+-- mysql.server start
+-- mysql -u root < schema.sql
+
 DROP DATABASE IF EXISTS pley;
 
 CREATE DATABASE pley;
@@ -31,7 +34,7 @@ CREATE TABLE pictures (
 	FOREIGN KEY (restaurant_id) REFERENCES restaurants(id) ON DELETE CASCADE
 );
 
-INSERT INTO restaurants (name) VALUES ("Gogi Time ");
+INSERT INTO restaurants (name) VALUES ("Gogi Time");
 INSERT INTO restaurants (name) VALUES ("Boba Guys");
 INSERT INTO restaurants (name) VALUES ("Chipotle");
 INSERT INTO restaurants (name) VALUES ("Fork & Spoon");
@@ -52,11 +55,11 @@ INSERT INTO restaurants (name) VALUES ("Flipside");
 INSERT INTO restaurants (name) VALUES ("Urban Tavern");
 INSERT INTO restaurants (name) VALUES ("707 Sutter");
 INSERT INTO restaurants (name) VALUES ("Momofuku");
-INSERT INTO restaurants (name) VALUES ("Roaring Fork ");
+INSERT INTO restaurants (name) VALUES ("Roaring Fork");
 INSERT INTO restaurants (name) VALUES ("Ippudo");
 INSERT INTO restaurants (name) VALUES ("The Melt");
 INSERT INTO restaurants (name) VALUES ("BunMee");
-INSERT INTO restaurants (name) VALUES ("Pei Wei ");
+INSERT INTO restaurants (name) VALUES ("Pei Wei");
 INSERT INTO restaurants (name) VALUES ("The Cavalier");
 INSERT INTO restaurants (name) VALUES ("Dirty Habit");
 INSERT INTO restaurants (name) VALUES ("Lin Jia Asian Kitchen");
@@ -76,7 +79,7 @@ INSERT INTO restaurants (name) VALUES ("Anson's Handsome Hamburgers");
 INSERT INTO restaurants (name) VALUES ("Belcampo Restuarant & Butcher Shop");
 INSERT INTO restaurants (name) VALUES ("Daily Grill");
 INSERT INTO restaurants (name) VALUES ("Morton's The Steakhouse");
-INSERT INTO restaurants (name) VALUES ("The Mark ");
+INSERT INTO restaurants (name) VALUES ("The Mark");
 INSERT INTO restaurants (name) VALUES ("California Pizza Kitchen");
 INSERT INTO restaurants (name) VALUES ("Ikaros Greek Restuarant");
 INSERT INTO restaurants (name) VALUES ("Modigliani Cafe");
@@ -91,7 +94,7 @@ INSERT INTO restaurants (name) VALUES ("Dosirak Shop");
 INSERT INTO restaurants (name) VALUES ("Super Duper Burgers");
 INSERT INTO restaurants (name) VALUES ("Hancook");
 INSERT INTO restaurants (name) VALUES ("Chan's Kitchen");
-INSERT INTO restaurants (name) VALUES ("Steven's Slow Today Deli ");
+INSERT INTO restaurants (name) VALUES ("Steven's Slow Today Deli");
 INSERT INTO restaurants (name) VALUES ("Aisle 5");
 INSERT INTO restaurants (name) VALUES ("CANA Cuban Parlor & Cafe");
 INSERT INTO restaurants (name) VALUES ("Homeroom");
@@ -108,15 +111,15 @@ INSERT INTO restaurants (name) VALUES ("Belotti Ristorante");
 INSERT INTO restaurants (name) VALUES ("Tacolicious");
 INSERT INTO restaurants (name) VALUES ("The Hog's Apothecary");
 INSERT INTO restaurants (name) VALUES ("Tim Ho Wan");
-INSERT INTO restaurants (name) VALUES ("Postino's ");
+INSERT INTO restaurants (name) VALUES ("Postino's");
 INSERT INTO restaurants (name) VALUES ("The Melting Pot");
 INSERT INTO restaurants (name) VALUES ("Rubio's");
-INSERT INTO restaurants (name) VALUES ("Bonchon ");
+INSERT INTO restaurants (name) VALUES ("Bonchon");
 INSERT INTO restaurants (name) VALUES ("MOD Pizza");
-INSERT INTO restaurants (name) VALUES ("Wingstop ");
+INSERT INTO restaurants (name) VALUES ("Wingstop");
 INSERT INTO restaurants (name) VALUES ("Tempest");
 INSERT INTO restaurants (name) VALUES ("Playland");
-INSERT INTO restaurants (name) VALUES ("Raven ");
+INSERT INTO restaurants (name) VALUES ("Raven");
 INSERT INTO restaurants (name) VALUES ("Temple");
 INSERT INTO restaurants (name) VALUES ("Hawthorne");
 INSERT INTO restaurants (name) VALUES ("The Yellow Submarine");
