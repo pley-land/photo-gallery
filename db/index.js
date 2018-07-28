@@ -12,6 +12,7 @@ connection.connect();
 const getPictures = (restaurant, cb) => {
   connection.query(`SELECT url, helpful, not_helpful FROM pictures INNER JOIN restaurants ON pictures.restaurant_id = restaurants.id WHERE restaurants.name = '${restaurant}';`, (error, results) => {
     if (error) throw error;
+    console.log(results);
     cb.send(results);
   });
 };
