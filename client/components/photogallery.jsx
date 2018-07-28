@@ -113,25 +113,25 @@ class PhotoGallery extends React.Component {
   }
 
   getRandomRestaurant() {
-    const restuarant = this.state.restaurants[Math.floor(Math.random() * (100))];
-    console.log(restuarant);
-    return restuarant;
+    const restaurant = this.state.restaurants[Math.floor(Math.random() * (100))];
+    console.log(restaurant);
+    return restaurant;
   }
 
   handleClick(e) {
-    e.preventDefault();
-    console.log('handleClick', e);
+    // e.preventDefault();
+    // console.log('handleClick', e, this);
   }
 
   enlargePicture(e) {
-    e.preventDefault();
+    // e.preventDefault();
     $('#img2').removeClass('selected');
     $('#img2').addClass('default');
     $(e.target).addClass('selected');
   }
 
-  shrinkPicture(e) {
-    e.preventDefault();
+  shrinkPicture() {
+    // e.preventDefault();
     $('#img2').addClass('selected');
     $('#img2').removeClass('default');
     $('#img3').removeClass('selected');
@@ -197,3 +197,4 @@ class PhotoGallery extends React.Component {
 }
 
 module.exports = PhotoGallery;
+// npm test -- -u
