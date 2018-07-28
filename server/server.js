@@ -4,13 +4,10 @@ const db = require('./../db/index');
 
 const app = express();
 
-
-app.use(express.static('public'));
-
-// app.use('/biz/', express.static('public'));
-// app.get('/biz/', (req, res) => res.send('Hello World!'));
+app.use('/', express.static('public'));
 
 app.get('/biz/:restaurant', (req, res) => {
+  console.log(req.params);
   db.getPictures(req.params.restaurant, res);
 });
 
