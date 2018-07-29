@@ -93,7 +93,7 @@ class PhotoGallery extends React.Component {
             <img
               id="img2"
               className="selected photo"
-              onClick={this.openModal}
+              onClick={this.onClickHandler}
               onMouseEnter={this.enlargePicture}
               onMouseLeave={this.shrinkPicture}
               src=""
@@ -106,7 +106,7 @@ class PhotoGallery extends React.Component {
             <img
               id="img3"
               className="default photo"
-              onClick={this.openModal}
+              onClick={this.onClickHandler}
               onMouseEnter={this.enlargePicture}
               onMouseLeave={this.shrinkPicture}
               src=""
