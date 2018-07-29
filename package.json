@@ -37,13 +37,16 @@
     "mysql": "^2.16.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-image-lightbox": "^5.0.0",
     "react-modal": "^3.5.1",
     "react-modal-image": "^2.1.4",
     "react-test-renderer": "^16.4.1",
     "sinon": "^6.1.4",
+    "style-loader": "^0.21.0",
     "webpack": "^4.16.1"
   },
   "devDependencies": {
+    "css-loader": "^1.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",

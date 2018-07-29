@@ -1,6 +1,6 @@
 .centered {
 	display: inline-block;
-    z-index: 100;
+    z-index: .5;
     position:absolute;
     color: white;
 }
@@ -31,8 +31,6 @@
 
 #photo-gallery {
 	display: flex;
-    /*border-style: solid;*/
-    /*border-color: red;*/
     height: 220px;
     width: 690px;
     flex-direction: row;
@@ -72,6 +70,20 @@
     -webkit-transition: .2s;
 }
 
+.modal-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#sidebar {
+    flex: 1 1 auto;
+    height: 100%;
+    background: white;
+    color: white;
+}
+
 img {
 	max-width:auto;
 	max-height:100%;
@@ -96,8 +108,7 @@ img {
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    max-height: 500px; 
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
