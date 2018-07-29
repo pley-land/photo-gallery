@@ -5,18 +5,30 @@
     color: white;
 }
 
+#topshelf {
+    display: flex;
+    justify-content: center;
+    flex-direction: column
+}
+
+#searchbar {
+    width: 1200px;
+    height: auto;
+}
+
 #top {
 	display: flex;
     flex-direction: row;
     justify-content: center;
-    border-style: solid;
-    border-color: red;
+    /*border-style: solid;*/
+    /*border-color: red;*/
+    background-color: #e8eaed;
     height: 400px;
     width: 1200px;
-  	resize: vertical;
+  	/*resize: vertical;*/
   	overflow: auto;
   	align-items: center;
-  	justify-content: space-evenly;
+  	/*justify-content: space-evenly;*/
 }
 
 #map {
@@ -25,7 +37,7 @@
     height: 300px;
     width: 400px;
     text-align: center;
-  	resize: vertical;
+  	/*resize: vertical;*/
   	overflow: auto;
 }
 

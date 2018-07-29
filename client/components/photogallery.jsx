@@ -1,6 +1,9 @@
 import React from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import searchBarIMG from '../../public/StaticSearch.png';
+import mapIMG from '../../public/StaticMap.png';
+
 
 const $ = require('jquery');
 
@@ -57,60 +60,69 @@ class PhotoGallery extends React.Component {
     });
 
     return (
-      <div id="top">
-        <div id="map">
-        Map Box
-        </div>
-        <div id="photo-gallery">
-          <div id="photo1">
-            <img
-              id="img1"
-              className="default photo"
-              onClick={this.onClickHandler}
-              onMouseEnter={this.enlargePicture}
-              onMouseLeave={this.shrinkPicture}
-              src=""
-              alt="Could be portrait or landscape"
-            />
-            {isOpen && (
-              <Lightbox
-                mainSrc={images[photoIndex]}
-                nextSrc={images[(photoIndex + 1) % images.length]}
-                prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-                onCloseRequest={() => this.setState({ isOpen: false })}
-                onMovePrevRequest={() => this.setState({
-                  photoIndex: (photoIndex + images.length - 1) % images.length,
-                })
-                }
-                onMoveNextRequest={() => this.setState({
-                  photoIndex: (photoIndex + 1) % images.length,
-                })
-                }
+      <div id="topshelf">
+        <img
+          id="searchbar"
+          src={searchBarIMG}
+          alt="Searchbar"
+        />
+        <div id="top">
+          <img
+            id="map-img"
+            src={mapIMG}
+            alt="mapIMG"
+          />
+          <div id="photo-gallery">
+            <div id="photo1">
+              <img
+                id="img1"
+                className="default photo"
+                onClick={this.onClickHandler}
+                onMouseEnter={this.enlargePicture}
+                onMouseLeave={this.shrinkPicture}
+                src=""
+                alt="Could be portrait or landscape"
               />
-            )}
-          </div>
-          <div id="photo2">
-            <img
-              id="img2"
-              className="selected photo"
-              onClick={this.onClickHandler}
-              onMouseEnter={this.enlargePicture}
-              onMouseLeave={this.shrinkPicture}
-              src=""
-              alt="Could be portrait or landscape" />
-          </div>
-          <div id="photo3">
-            <span className="centered">
-            See All Photos
-            </span>
-            <img
-              id="img3"
-              className="default photo"
-              onClick={this.onClickHandler}
-              onMouseEnter={this.enlargePicture}
-              onMouseLeave={this.shrinkPicture}
-              src=""
-              alt="Could be portrait or landscape" />
+              {isOpen && (
+                <Lightbox
+                  mainSrc={images[photoIndex]}
+                  nextSrc={images[(photoIndex + 1) % images.length]}
+                  prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                  onCloseRequest={() => this.setState({ isOpen: false })}
+                  onMovePrevRequest={() => this.setState({
+                    photoIndex: (photoIndex + images.length - 1) % images.length,
+                  })
+                  }
+                  onMoveNextRequest={() => this.setState({
+                    photoIndex: (photoIndex + 1) % images.length,
+                  })
+                  }
+                />
+              )}
+            </div>
+            <div id="photo2">
+              <img
+                id="img2"
+                className="selected photo"
+                onClick={this.onClickHandler}
+                onMouseEnter={this.enlargePicture}
+                onMouseLeave={this.shrinkPicture}
+                src=""
+                alt="Could be portrait or landscape" />
+            </div>
+            <div id="photo3">
+              <span className="centered">
+              See All Photos
+              </span>
+              <img
+                id="img3"
+                className="default photo"
+                onClick={this.onClickHandler}
+                onMouseEnter={this.enlargePicture}
+                onMouseLeave={this.shrinkPicture}
+                src=""
+                alt="Could be portrait or landscape" />
+            </div>
           </div>
         </div>
       </div>
@@ -176,4 +188,3 @@ module.exports = PhotoGallery;
               </div>
             </Modal>
             */
-// npm test -- -u
