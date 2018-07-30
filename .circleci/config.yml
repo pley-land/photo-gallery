@@ -12,6 +12,12 @@ jobs:
           - DB_USERNAME: root
           - DB_PASSWORD: password
       - image: circleci/mysql:5.7.22
+      - restart: 'always'
+      - expose:
+        - '3005'
+      - ports:
+        - '3005:3005'
+
         environment:
           - MYSQL_ROOT_HOST: "root"
           - MYSQL_ROOT_PASSWORD: password
