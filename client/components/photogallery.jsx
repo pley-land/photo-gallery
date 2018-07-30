@@ -85,6 +85,7 @@ class PhotoGallery extends React.Component {
               />
               {isOpen && (
                 <Lightbox
+                  className="default photo"
                   mainSrc={images[photoIndex]}
                   nextSrc={images[(photoIndex + 1) % images.length]}
                   prevSrc={images[(photoIndex + images.length - 1) % images.length]}
@@ -131,7 +132,6 @@ class PhotoGallery extends React.Component {
 }
 
 module.exports = PhotoGallery;
-
 
 // openModal(e) {
 //   this.setState({ modalIsOpen: true });
