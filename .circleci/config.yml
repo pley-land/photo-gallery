@@ -28,15 +28,13 @@ jobs:
           - v1-dependencies-
 
       - run: sudo npm install -g npm 
-      - run: sudo npm install -g mysql-client
-      - run: sudo npm install -g mysql-server
+      - run: sudo apt install -g mysql-client
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: mysql.server start
       - run: mysql -h 127.0.0.1 -u root -p < ./db/schema.sql
       - run: password
 
