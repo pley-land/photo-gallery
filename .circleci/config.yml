@@ -28,8 +28,8 @@ jobs:
           - v1-dependencies-
 
       - run: sudo npm install -g npm 
-      - run: sudo npm install mysql-client
-      - run: sudo npm install mysql-server
+      - run: sudo npm install -g mysql-client
+      - run: sudo npm install -g mysql-server
 
       - save_cache:
           paths:
