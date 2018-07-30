@@ -3,6 +3,7 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import searchBarIMG from '../../public/StaticSearch.png';
 import mapIMG from '../../public/StaticMap.png';
+import squares from '../../public/4squares.jpg';
 
 
 const $ = require('jquery');
@@ -15,6 +16,7 @@ class PhotoGallery extends React.Component {
     this.state = {
       photoIndex: 0,
       isOpen: false,
+      photoCount: 0,
     };
 
     this.enlargePicture = this.enlargePicture.bind(this);
@@ -22,14 +24,24 @@ class PhotoGallery extends React.Component {
     this.onClickHandler = this.onClickHandler.bind(this);
   }
 
+  componentDidMount() {
+    this.setState({ photoCount: images.length });
+  }
+
   onClickHandler(e) {
     this.setState({ isOpen: true });
   }
 
   enlargePicture(e) {
-    $('#img2').removeClass('selected');
-    $('#img2').addClass('default');
-    $(e.target).addClass('selected');
+    if (e.target.nodeName === 'SPAN') {
+      $('#img2').removeClass('selected');
+      $('#img2').addClass('default');
+      $('#img3').addClass('selected');
+    } else {
+      $('#img2').removeClass('selected');
+      $('#img2').addClass('default');
+      $(e.target).addClass('selected');
+    }
   }
 
   shrinkPicture() {
@@ -107,8 +119,17 @@ class PhotoGallery extends React.Component {
                 alt="Could be portrait or landscape" />
             </div>
             <div id="photo3">
-              <span className="centered">
-              See All Photos
+              <span className="centered shadow"
+                onClick={this.onClickHandler}
+                onMouseEnter={this.enlargePicture}
+                onMouseLeave={this.shrinkPicture}
+              >
+                <img
+                  id="squares"
+                  src={squares}
+                  alt="squares"
+                />
+              <br />See All 3
               </span>
               <img
                 id="img3"

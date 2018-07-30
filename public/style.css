@@ -1,8 +1,10 @@
 .centered {
+    text-align:center;
 	display: inline-block;
     z-index: 1;
     position:absolute;
     color: white;
+    font-family: Helvetica;
 }
 
 .photo {
@@ -10,6 +12,11 @@
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
+}
+
+#squares {
+    width: 21px;
+    height: 21px;
 }
 
 #topshelf {
@@ -82,6 +89,13 @@
     height: 255px;
     width: 255px;
     -webkit-transition: .2s;
+}
+
+.shadow {
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 40px 40px rgba(0,0,0,0.6);
+    border-radius:100px;
+
 }
 
 #sidebar {
