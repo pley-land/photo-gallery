@@ -23,10 +23,7 @@ class PhotoGallery extends React.Component {
   }
 
   onClickHandler(e) {
-    console.log(this.state.isOpen);
-    console.log(this.state.photoIndex);
     this.setState({ isOpen: true });
-    return;
   }
 
   enlargePicture(e) {
@@ -66,7 +63,7 @@ class PhotoGallery extends React.Component {
         />
         <div id="top">
           <img
-            id="map-img"
+            id="mapIMG"
             src={mapIMG}
             alt="mapIMG"
           />

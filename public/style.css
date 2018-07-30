@@ -77,13 +77,6 @@
     -webkit-transition: .2s;
 }
 
-.modal-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-
 #sidebar {
     flex: 1 1 auto;
     height: 100%;
