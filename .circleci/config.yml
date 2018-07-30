@@ -4,23 +4,10 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:8.11
-        environment:
-          - DB_CONNECTION: mysql
-          - DB_HOST: 127.0.0.1
-          - DB_PORT: 3005
-          - DB_DATABASE: pley
-          - DB_USERNAME: root
-          - DB_PASSWORD: password
       - image: circleci/mysql:5.7.22
-      - restart: 'always'
-      - expose:
-        - '3005'
-      - ports:
-        - '3005:3005'
-
         environment:
-          - MYSQL_ROOT_HOST: "root"
-          - MYSQL_ROOT_PASSWORD: password
+          - MYSQL_ALLOW_EMPTY_PASSWORD=true
+          - MYSQL_ROOT_HOST=%
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -48,7 +35,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # - run: mysql -h 127.0.0.1 -u root -p < ./db/schema.sql
-      - run: mysql -h$DB_HOST -u$DB_USERNAME -p$DB_PASSWORD $DB_DATABASE < ./db/schema.sql #Example: /home/circleci/<YOUR REPOSITORY>/<YOUR DATABASE FILE>
+      - run: mysql -h 127.0.0.1 -u root < ./db/schema.sql #Example: /home/circleci/<YOUR REPOSITORY>/<YOUR DATABASE FILE>
 
 
       - run:
