@@ -29,7 +29,7 @@ jobs:
 
       - run: sudo npm install -g npm 
       - run: sudo npm install mysql-client
-      # - run: sudo apt-get install mysql-server
+      - run: sudo npm install mysql-server
 
       - save_cache:
           paths:
