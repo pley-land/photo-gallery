@@ -7,11 +7,7 @@ import mapIMG from '../../public/StaticMap.png';
 
 const $ = require('jquery');
 
-const images = [
-  'https://s3.ap-northeast-2.amazonaws.com/pleyland/75.jpg',
-  'https://s3.ap-northeast-2.amazonaws.com/pleyland/47.jpg',
-  'https://s3.ap-northeast-2.amazonaws.com/pleyland/36.jpg',
-];
+let images = [];
 
 class PhotoGallery extends React.Component {
   constructor(props) {
@@ -52,8 +48,10 @@ class PhotoGallery extends React.Component {
     const { photoIndex, isOpen } = this.state;
 
     $.get('http://localhost:3005/biz/Ippudo', (data) => {
+      images = [];
       data.forEach((element, index) => {
         $(`#img${index + 1}`).attr('src', element.url);
+        images.push(element.url);
       });
     }).fail(() => {
       console.log('error');
