@@ -15,7 +15,6 @@ class PhotoGallery extends React.Component {
     this.state = {
       photoIndex: 0,
       isOpen: false,
-      photoCount: 0,
     };
 
     this.enlargePicture = this.enlargePicture.bind(this);
@@ -23,16 +22,11 @@ class PhotoGallery extends React.Component {
     this.onClickHandler = this.onClickHandler.bind(this);
   }
 
-  componentDidMount() {
-    this.setState({ photoCount: images.length });
-  }
-
-  onClickHandler(e) {
+  onClickHandler() {
     this.setState({ isOpen: true });
   }
 
   enlargePicture(e) {
-    console.log(e.target);
     if (e.target.nodeName === 'SPAN') {
       $('#img2').removeClass('selected');
       $('#img2').addClass('default');
@@ -116,10 +110,12 @@ class PhotoGallery extends React.Component {
                 onMouseEnter={this.enlargePicture}
                 onMouseLeave={this.shrinkPicture}
                 src=""
-                alt="Could be portrait or landscape" />
+                alt="Could be portrait or landscape"
+              />
             </div>
             <div id="photo3">
-              <span className="centered shadow"
+              <span
+                className="centered shadow"
                 onClick={this.onClickHandler}
                 onMouseEnter={this.enlargePicture}
                 onMouseLeave={this.shrinkPicture}
@@ -129,7 +125,8 @@ class PhotoGallery extends React.Component {
                   src={squares}
                   alt="squares"
                 />
-              <br />See All 3
+                <br />
+                See All 3
               </span>
               <img
                 id="img3"
@@ -138,7 +135,8 @@ class PhotoGallery extends React.Component {
                 onMouseEnter={this.enlargePicture}
                 onMouseLeave={this.shrinkPicture}
                 src=""
-                alt="Could be portrait or landscape" />
+                alt="Could be portrait or landscape"
+              />
             </div>
           </div>
         </div>
@@ -148,59 +146,3 @@ class PhotoGallery extends React.Component {
 }
 
 module.exports = PhotoGallery;
-
-// openModal(e) {
-//   this.setState({ modalIsOpen: true });
-
-//   let imgSource = e.target.src;
-//   // console.log($('#img1-modal'));
-//   // $('#img1-modal').attr('src', imgSource);
-// }
-
-// closeModal() {
-//   this.setState({ modalIsOpen: false });
-// }
-
-// const customStyles = {
-//   overlay: {
-//     position: 'fixed',
-//     top: 0,
-//     left: 0,
-//     right: 0,
-//     bottom: 0,
-//     backgroundColor: 'rgba(0, 0, 0, 0.85)',
-//   },
-//   content: {
-//     top: '50%',
-//     left: '50%',
-//     right: 'auto',
-//     bottom: 'auto',
-//     marginRight: '-50%',
-//     transform: 'translate(-50%, -50%)',
-//     background: 'black',
-//     padding: '0px, 0px, 0px, 0px',
-//     border: '0px',
-//     width: '90%',
-//   },
-// };
-
-/*
-            <Modal
-              isOpen={this.state.modalIsOpen}
-              onAfterOpen={this.afterOpenModal}
-              onRequestClose={this.closeModal}
-              style={customStyles}
-              contentLabel='Example Modal'
-            >
-              <div className="modal-box">
-                <button onClick={this.closeModal}>close</button>
-                <img
-                id="img1"
-                className="modal-content"
-                src=""
-                alt=""
-                />
-                <div id="sidebar">test</div>
-              </div>
-            </Modal>
-            */
