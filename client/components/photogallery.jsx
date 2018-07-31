@@ -1,194 +1,190 @@
 import React from 'react';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
 
 const $ = require('jquery');
+
+let images = [];
 
 class PhotoGallery extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      restaurants: ['Gogi Time',
-        'Boba Guys',
-        'Chipotle',
-        'Fork & Spoon',
-        'Halal Guys',
-        'EighTea',
-        'Burger King',
-        'In-n-Out',
-        'Popeyes',
-        'Tu Lan',
-        'KFC',
-        'Chick-fil-a',
-        'Blind Tiger',
-        "Wendy's",
-        'A&W',
-        'Rooster & Rice',
-        'Shakewell',
-        'Flipside',
-        'Urban Tavern',
-        '707 Sutter',
-        'Momofuku',
-        'Roaring Fork ',
-        'Ippudo',
-        'The Melt',
-        'BunMee',
-        'Pei Wei ',
-        'The Cavalier',
-        'Dirty Habit',
-        'Lin Jia Asian Kitchen',
-        'Colonial Donuts',
-        'Oakland Kosher Foods',
-        'Rolling Dunes',
-        'Grand Lake Kitchen',
-        'Soba Ichi',
-        'Proposition Chicken',
-        'Qi Dumpling Lounge',
-        "Warren's Webpack Bananza",
-        'Arizmendi Bakery',
-        'The Star on Grand',
-        'Holy Land Restuarant',
-        'Cheese Steak Shop',
-        "Anson's Handsome Hamburgers",
-        'Belcampo Restuarant & Butcher Shop',
-        'Daily Grill',
-        "Morton's The Steakhouse",
-        'The Mark',
-        'California Pizza Kitchen',
-        'Ikaros Greek Restuarant',
-        'Modigliani Cafe',
-        'JJ Burger',
-        'Sliver',
-        'Lakeshore Cafe',
-        'Belly',
-        "Lovely's",
-        'Mua',
-        'Flavor of India',
-        'Dosirak Shop',
-        'Super Duper Burgers',
-        'Hancook',
-        "Chan's Kitchen",
-        "Steven's Slow Today Deli",
-        'Aisle 5',
-        'CANA Cuban Parlor & Cafe',
-        'Homeroom',
-        "Justin's Koolaid Bar",
-        'CHICA Oakland',
-        'Penrose',
-        'Mockingbird',
-        "Wally's Cafe",
-        'Orchid Pavillion Cafe',
-        'Fogo de Chao',
-        'The Grove',
-        "Michael's Romantic Bulgogi Beef",
-        'Belotti Ristorante',
-        'Tacolicious',
-        "The Hog's Apothecary",
-        'Tim Ho Wan',
-        "Postino's",
-        'The Melting Pot',
-        "Rubio's",
-        'Bonchon ',
-        'MOD Pizza',
-        'Wingstop ',
-        'Tempest',
-        'Playland',
-        'Raven ',
-        'Temple',
-        'Hawthorne',
-        'The Yellow Submarine',
-        'Subway',
-        'Umami Burger',
-        'Asian Box',
-        'Hopscotch',
-        'Shogun Japanese Sushi',
-        "Shane is Li's bestfriend",
-        'Champa Garden',
-        'Southern Cafe',
-        'Jong Ga House',
-        'Sidebar Oaktown',
-        'Mua'],
+      photoIndex: 0,
+      isOpen: false,
     };
-    this.handleClick = this.handleClick.bind(this);
-    this.enlargePicture = this.enlargePicture.bind(this);
-    this.shrinkPicture = this.shrinkPicture.bind(this);
+    this.onClickHandler = this.onClickHandler.bind(this);
   }
 
-  getRandomRestaurant() {
-    const restaurant = this.state.restaurants[Math.floor(Math.random() * (100))];
-    console.log(restaurant);
-    return restaurant;
-  }
-
-  handleClick(e) {
-    // e.preventDefault();
-    // console.log('handleClick', e, this);
-  }
-
-  enlargePicture(e) {
-    // e.preventDefault();
-    $('#img2').removeClass('selected');
-    $('#img2').addClass('default');
-    $(e.target).addClass('selected');
-  }
-
-  shrinkPicture() {
-    // e.preventDefault();
-    $('#img2').addClass('selected');
-    $('#img2').removeClass('default');
-    $('#img3').removeClass('selected');
-    $('#img3').addClass('default');
-    $('#img1').removeClass('selected');
-    $('#img1').addClass('default');
+  onClickHandler() {
+    this.setState({ isOpen: true });
   }
 
   render() {
-    // $.get(`http://localhost:3005/biz/${this.getRandomRestaurant()}`, (data) => {
+    const { photoIndex, isOpen } = this.state;
+
     $.get('http://localhost:3005/biz/Ippudo', (data) => {
+      images = [];
       data.forEach((element, index) => {
         $(`#img${index + 1}`).attr('src', element.url);
+        images.push(element.url);
       });
     }).fail(() => {
       console.log('error');
     });
 
     return (
-      <div id="top">
-        <div id="map">
-        Map Box
-        </div>
-        <div id="photo-gallery">
-          <div id="photo1">
-            <img
-              id="img1"
-              className="default photo"
-              onClick={this.handleClick}
-              onMouseEnter={this.enlargePicture}
-              onMouseLeave={this.shrinkPicture}
-              src=""
-              alt="Could be portrait or landscape"
-            />
-          </div>
-          <div id="photo2">
-            <img
-              id="img2"
-              className="selected photo"
-              onClick={this.handleClick}
-              onMouseEnter={this.enlargePicture}
-              onMouseLeave={this.shrinkPicture}
-              src=""
-              alt="Could be portrait or landscape" />
-          </div>
-          <div id="photo3">
-            <span className="centered">
-            See All Photos
-            </span>
-            <img
-              id="img3"
-              className="default photo"
-              onClick={this.handleClick}
-              onMouseEnter={this.enlargePicture}
-              onMouseLeave={this.shrinkPicture}
-              src=""
-              alt="Could be portrait or landscape" />
+      <div id="topshelf">
+        <img
+          id="searchbar"
+          src="https://s3.ap-northeast-2.amazonaws.com/pleyland/StaticSearch.png"
+          alt="Searchbar"
+        />
+        <div id="top">
+          <img
+            id="mapIMG"
+            src="https://s3.ap-northeast-2.amazonaws.com/pleyland/StaticMap.png"
+            alt="mapIMG"
+          />
+          <div id="photo-gallery">
+            <div id="photo1">
+              <img
+                id="img1"
+                className="default photo"
+                onClick={this.onClickHandler}
+                onMouseEnter={(e) => {
+                  if (e.target.nodeName === 'SPAN') {
+                    $('#img2').removeClass('selected');
+                    $('#img2').addClass('default');
+                    $('#img3').addClass('selected');
+                  } else {
+                    $('#img2').removeClass('selected');
+                    $('#img2').addClass('default');
+                    $(e.target).addClass('selected');
+                  }
+                }}
+                onMouseLeave={() => {
+                  $('#img2').addClass('selected');
+                  $('#img2').removeClass('default');
+                  $('#img3').removeClass('selected');
+                  $('#img3').addClass('default');
+                  $('#img1').removeClass('selected');
+                  $('#img1').addClass('default');
+                }}
+                onKeyDown={this.handleKeyDown}
+                src=""
+                alt=""
+              />
+              {isOpen && (
+                <div id="lightbox-wrapper">
+                  <Lightbox
+                    className="default photo"
+                    mainSrc={images[photoIndex]}
+                    nextSrc={images[(photoIndex + 1) % images.length]}
+                    prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                    onCloseRequest={() => this.setState({ isOpen: false })}
+                    onMovePrevRequest={() => this.setState({
+                      photoIndex: (photoIndex + images.length - 1) % images.length,
+                    })
+                    }
+                    onMoveNextRequest={() => this.setState({
+                      photoIndex: (photoIndex + 1) % images.length,
+                    })
+                    }
+                  />
+                </div>
+              )}
+            </div>
+            <div id="photo2">
+              <img
+                id="img2"
+                className="selected photo"
+                onClick={this.onClickHandler}
+                onMouseEnter={(e) => {
+                  if (e.target.nodeName === 'SPAN') {
+                    $('#img2').removeClass('selected');
+                    $('#img2').addClass('default');
+                    $('#img3').addClass('selected');
+                  } else {
+                    $('#img2').removeClass('selected');
+                    $('#img2').addClass('default');
+                    $(e.target).addClass('selected');
+                  }
+                }}
+                onMouseLeave={() => {
+                  $('#img2').addClass('selected');
+                  $('#img2').removeClass('default');
+                  $('#img3').removeClass('selected');
+                  $('#img3').addClass('default');
+                  $('#img1').removeClass('selected');
+                  $('#img1').addClass('default');
+                }}
+                onKeyDown={this.handleKeyDown}
+                src=""
+                alt=""
+              />
+            </div>
+            <div id="photo3">
+              <span
+                className="centered shadow"
+                onClick={this.onClickHandler}
+                onMouseEnter={(e) => {
+                  if (e.target.nodeName === 'SPAN') {
+                    $('#img2').removeClass('selected');
+                    $('#img2').addClass('default');
+                    $('#img3').addClass('selected');
+                  } else {
+                    $('#img2').removeClass('selected');
+                    $('#img2').addClass('default');
+                    $(e.target).addClass('selected');
+                  }
+                }}
+                onMouseLeave={() => {
+                  $('#img2').addClass('selected');
+                  $('#img2').removeClass('default');
+                  $('#img3').removeClass('selected');
+                  $('#img3').addClass('default');
+                  $('#img1').removeClass('selected');
+                  $('#img1').addClass('default');
+                }}
+                onKeyDown={this.handleKeyDown}
+              >
+                <img
+                  id="squares"
+                  src="https://s3.ap-northeast-2.amazonaws.com/pleyland/4squares.jpg"
+                  alt="squares"
+                />
+                <br />
+                See All 3
+              </span>
+              <img
+                id="img3"
+                className="default photo"
+                onClick={this.onClickHandler}
+                onMouseEnter={(e) => {
+                  if (e.target.nodeName === 'SPAN') {
+                    $('#img2').removeClass('selected');
+                    $('#img2').addClass('default');
+                    $('#img3').addClass('selected');
+                  } else {
+                    $('#img2').removeClass('selected');
+                    $('#img2').addClass('default');
+                    $(e.target).addClass('selected');
+                  }
+                }}
+                onMouseLeave={() => {
+                  $('#img2').addClass('selected');
+                  $('#img2').removeClass('default');
+                  $('#img3').removeClass('selected');
+                  $('#img3').addClass('default');
+                  $('#img1').removeClass('selected');
+                  $('#img1').addClass('default');
+                }}
+                onKeyDown={this.handleKeyDown}
+                src=""
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -197,4 +193,3 @@ class PhotoGallery extends React.Component {
 }
 
 module.exports = PhotoGallery;
-// npm test -- -u

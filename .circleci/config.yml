@@ -1,22 +1,37 @@
 version: 2
 jobs:
   build:
-    docker: # See https://docs.docker.com/get-started/#docker-concepts if you are new to Docker.
-      - image: circleci/node:6.13.1
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:8.11
+      - image: circleci/mysql:5.7.22
+        environment:
+          - MYSQL_ALLOW_EMPTY_PASSWORD=true
+          - MYSQL_ROOT_HOST=%
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
+    working_directory: ~/photo-gallery
+
     steps:
       - checkout
-      - run: echo "A first hello"
-      - run: npm install
+
+      # Download and cache dependencies
       - run:
-          name: test
-          command: npm test
+          name: Update npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
-          name: code-coverage
-          command: './node_modules/.bin/nyc report --reporter=text-lcov'
-      - store_artifacts:
-          path: test-results.xml
-          prefix: tests
-      - store_artifacts:
-          path: coverage
-          prefix: coverage
-      - store_test_results:
+          name: Install npm wee
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run: sudo apt install -y mysql-client
+      - run: mysql -h 127.0.0.1 -u root < ./db/schema.sql
+      - run: npm test -- -u

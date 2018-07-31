@@ -14,12 +14,29 @@ module.exports = {
           presets: ['react', 'es2015', 'env'],
         },
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+      },
     ],
   },
   output: {
     path: path.join(__dirname, '/public'),
     filename: 'app.js',
   },
-  resolve: { extensions: ['.js', '.jsx'] },
+  resolve: {
+    extensions: ['.js', '.jsx', '.css'],
+  },
   watch: true,
 };
