@@ -2,9 +2,9 @@ import React from 'react';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import PhotoGallery from './photogallery';
-import sinon from 'sinon';
+// import sinon from 'sinon';
 
-const $ = require('jquery');
+// const $ = require('jquery');
 
 Enzyme.configure({ adapter: new Adapter() });
 describe('PhotoGallery Test Suite', () => {
