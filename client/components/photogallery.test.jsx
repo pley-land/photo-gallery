@@ -19,7 +19,7 @@ describe('PhotoGallery Test Suite', () => {
       jQuery33103509413025485584: true,
     };
     const wrapper = shallow(<PhotoGallery />);
-    wrapper.instance().handleClick(e);
+    wrapper.instance().onClickHandler(e);
   });
 
   it('PhotoGallery enlarges picture', () => {
@@ -27,6 +27,7 @@ describe('PhotoGallery Test Suite', () => {
       type: 'click',
       timeStamp: 1532753006757,
       jQuery33103509413025485584: true,
+      target: document.createElement('div'),
     };
     const wrapper = shallow(<PhotoGallery />);
     wrapper.instance().enlargePicture(e);
@@ -35,10 +36,5 @@ describe('PhotoGallery Test Suite', () => {
   it('PhotoGallery shrinks picture', () => {
     const wrapper = shallow(<PhotoGallery />);
     wrapper.instance().shrinkPicture();
-  });
-
-  it('PhotoGallery gets random restaurant', () => {
-    const wrapper = shallow(<PhotoGallery />);
-    wrapper.instance().getRandomRestaurant();
   });
 });

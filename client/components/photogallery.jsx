@@ -1,6 +1,5 @@
 import React from 'react';
 import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
 import searchBarIMG from '../../public/StaticSearch.png';
 import mapIMG from '../../public/StaticMap.png';
 import squares from '../../public/4squares.jpg';
@@ -33,6 +32,7 @@ class PhotoGallery extends React.Component {
   }
 
   enlargePicture(e) {
+    console.log(e.target);
     if (e.target.nodeName === 'SPAN') {
       $('#img2').removeClass('selected');
       $('#img2').addClass('default');
