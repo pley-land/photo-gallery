@@ -46,7 +46,7 @@ ShallowWrapper {
               id="photo1"
             >
               <img
-                alt="Could be portrait or landscape"
+                alt=""
                 className="default photo"
                 id="img1"
                 onClick={[Function]}
@@ -59,7 +59,7 @@ ShallowWrapper {
               id="photo2"
             >
               <img
-                alt="Could be portrait or landscape"
+                alt=""
                 className="selected photo"
                 id="img2"
                 onClick={[Function]}
@@ -90,7 +90,7 @@ ShallowWrapper {
                 See All 3
               </span>
               <img
-                alt="Could be portrait or landscape"
+                alt=""
                 className="default photo"
                 id="img3"
                 onClick={[Function]}
@@ -143,7 +143,7 @@ ShallowWrapper {
                 id="photo1"
               >
                 <img
-                  alt="Could be portrait or landscape"
+                  alt=""
                   className="default photo"
                   id="img1"
                   onClick={[Function]}
@@ -156,7 +156,7 @@ ShallowWrapper {
                 id="photo2"
               >
                 <img
-                  alt="Could be portrait or landscape"
+                  alt=""
                   className="selected photo"
                   id="img2"
                   onClick={[Function]}
@@ -187,7 +187,7 @@ ShallowWrapper {
                   See All 3
                 </span>
                 <img
-                  alt="Could be portrait or landscape"
+                  alt=""
                   className="default photo"
                   id="img3"
                   onClick={[Function]}
@@ -227,7 +227,7 @@ ShallowWrapper {
                   id="photo1"
                 >
                   <img
-                    alt="Could be portrait or landscape"
+                    alt=""
                     className="default photo"
                     id="img1"
                     onClick={[Function]}
@@ -240,7 +240,7 @@ ShallowWrapper {
                   id="photo2"
                 >
                   <img
-                    alt="Could be portrait or landscape"
+                    alt=""
                     className="selected photo"
                     id="img2"
                     onClick={[Function]}
@@ -271,7 +271,7 @@ ShallowWrapper {
                     See All 3
                   </span>
                   <img
-                    alt="Could be portrait or landscape"
+                    alt=""
                     className="default photo"
                     id="img3"
                     onClick={[Function]}
@@ -292,7 +292,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <img
-                      alt="Could be portrait or landscape"
+                      alt=""
                       className="default photo"
                       id="img1"
                       onClick={[Function]}
@@ -311,10 +311,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "alt": "Could be portrait or landscape",
+                      "alt": "",
                       "className": "default photo",
                       "id": "img1",
                       "onClick": [Function],
+                      "onKeyDown": undefined,
                       "onMouseEnter": [Function],
                       "onMouseLeave": [Function],
                       "src": "",
@@ -333,7 +334,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <img
-                    alt="Could be portrait or landscape"
+                    alt=""
                     className="selected photo"
                     id="img2"
                     onClick={[Function]}
@@ -349,10 +350,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "alt": "Could be portrait or landscape",
+                    "alt": "",
                     "className": "selected photo",
                     "id": "img2",
                     "onClick": [Function],
+                    "onKeyDown": undefined,
                     "onMouseEnter": [Function],
                     "onMouseLeave": [Function],
                     "src": "",
@@ -388,7 +390,7 @@ ShallowWrapper {
                       See All 3
                     </span>,
                     <img
-                      alt="Could be portrait or landscape"
+                      alt=""
                       className="default photo"
                       id="img3"
                       onClick={[Function]}
@@ -421,6 +423,7 @@ ShallowWrapper {
                       ],
                       "className": "centered shadow",
                       "onClick": [Function],
+                      "onKeyDown": undefined,
                       "onMouseEnter": [Function],
                       "onMouseLeave": [Function],
                     },
@@ -459,10 +462,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "alt": "Could be portrait or landscape",
+                      "alt": "",
                       "className": "default photo",
                       "id": "img3",
                       "onClick": [Function],
+                      "onKeyDown": undefined,
                       "onMouseEnter": [Function],
                       "onMouseLeave": [Function],
                       "src": "",
@@ -518,7 +522,7 @@ ShallowWrapper {
                 id="photo1"
               >
                 <img
-                  alt="Could be portrait or landscape"
+                  alt=""
                   className="default photo"
                   id="img1"
                   onClick={[Function]}
@@ -531,7 +535,7 @@ ShallowWrapper {
                 id="photo2"
               >
                 <img
-                  alt="Could be portrait or landscape"
+                  alt=""
                   className="selected photo"
                   id="img2"
                   onClick={[Function]}
@@ -562,7 +566,7 @@ ShallowWrapper {
                   See All 3
                 </span>
                 <img
-                  alt="Could be portrait or landscape"
+                  alt=""
                   className="default photo"
                   id="img3"
                   onClick={[Function]}
@@ -615,7 +619,7 @@ ShallowWrapper {
                   id="photo1"
                 >
                   <img
-                    alt="Could be portrait or landscape"
+                    alt=""
                     className="default photo"
                     id="img1"
                     onClick={[Function]}
@@ -628,7 +632,7 @@ ShallowWrapper {
                   id="photo2"
                 >
                   <img
-                    alt="Could be portrait or landscape"
+                    alt=""
                     className="selected photo"
                     id="img2"
                     onClick={[Function]}
@@ -659,7 +663,7 @@ ShallowWrapper {
                     See All 3
                   </span>
                   <img
-                    alt="Could be portrait or landscape"
+                    alt=""
                     className="default photo"
                     id="img3"
                     onClick={[Function]}
@@ -699,7 +703,7 @@ ShallowWrapper {
                     id="photo1"
                   >
                     <img
-                      alt="Could be portrait or landscape"
+                      alt=""
                       className="default photo"
                       id="img1"
                       onClick={[Function]}
@@ -712,7 +716,7 @@ ShallowWrapper {
                     id="photo2"
                   >
                     <img
-                      alt="Could be portrait or landscape"
+                      alt=""
                       className="selected photo"
                       id="img2"
                       onClick={[Function]}
@@ -743,7 +747,7 @@ ShallowWrapper {
                       See All 3
                     </span>
                     <img
-                      alt="Could be portrait or landscape"
+                      alt=""
                       className="default photo"
                       id="img3"
                       onClick={[Function]}
@@ -764,7 +768,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <img
-                        alt="Could be portrait or landscape"
+                        alt=""
                         className="default photo"
                         id="img1"
                         onClick={[Function]}
@@ -783,10 +787,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "alt": "Could be portrait or landscape",
+                        "alt": "",
                         "className": "default photo",
                         "id": "img1",
                         "onClick": [Function],
+                        "onKeyDown": undefined,
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
                         "src": "",
@@ -805,7 +810,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
-                      alt="Could be portrait or landscape"
+                      alt=""
                       className="selected photo"
                       id="img2"
                       onClick={[Function]}
@@ -821,10 +826,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "alt": "Could be portrait or landscape",
+                      "alt": "",
                       "className": "selected photo",
                       "id": "img2",
                       "onClick": [Function],
+                      "onKeyDown": undefined,
                       "onMouseEnter": [Function],
                       "onMouseLeave": [Function],
                       "src": "",
@@ -860,7 +866,7 @@ ShallowWrapper {
                         See All 3
                       </span>,
                       <img
-                        alt="Could be portrait or landscape"
+                        alt=""
                         className="default photo"
                         id="img3"
                         onClick={[Function]}
@@ -893,6 +899,7 @@ ShallowWrapper {
                         ],
                         "className": "centered shadow",
                         "onClick": [Function],
+                        "onKeyDown": undefined,
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
                       },
@@ -931,10 +938,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "alt": "Could be portrait or landscape",
+                        "alt": "",
                         "className": "default photo",
                         "id": "img3",
                         "onClick": [Function],
+                        "onKeyDown": undefined,
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
                         "src": "",
