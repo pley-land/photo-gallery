@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhotoGallery Test Suite PhotoGallery renders correctly 1`] = `
+<div
+  id="topshelf"
+>
+  <img
+    alt="Searchbar"
+    id="searchbar"
+    src={
+      Object {
+        "process": [Function],
+      }
+    }
+  />
+  <div
+    id="top"
+  >
+    <img
+      alt="mapIMG"
+      id="mapIMG"
+      src={
+        Object {
+          "process": [Function],
+        }
+      }
+    />
+    <div
+      id="photo-gallery"
+    >
+      <div
+        id="photo1"
+      >
+        <img
+          alt=""
+          className="default photo"
+          id="img1"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          src=""
+        />
+      </div>
+      <div
+        id="photo2"
+      >
+        <img
+          alt=""
+          className="selected photo"
+          id="img2"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          src=""
+        />
+      </div>
+      <div
+        id="photo3"
+      >
+        <span
+          className="centered shadow"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <img
+            alt="squares"
+            id="squares"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />
+          <br />
+          See All 3
+        </span>
+        <img
+          alt=""
+          className="default photo"
+          id="img3"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          src=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
