@@ -32,26 +32,10 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
-            
-      # - restore_cache:
-          # keys:
-          # - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          # - v1-dependencies-
-      # - run: sudo npm install -y npm 
-      # - save_cache:
-          # paths:
-            # - node_modules
-          # key: v1-dependencies-{{ checksum "package.json" }}
-
       - run: sudo apt install -y mysql-client
-
       - run: mysql -h 127.0.0.1 -u root < ./db/schema.sql
-
-      # - run: sudo apt install -y express
-
       - run:
           command: node ./server/server.js
           background: true
 
-      - run: npm test
+      - run: npm test -- -u
