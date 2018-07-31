@@ -18,278 +18,27 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <img
+          alt="Searchbar"
+          id="searchbar"
+          src={
+            Object {
+              "process": [Function],
+            }
+          }
+        />,
         <div
-          id="map"
+          id="top"
         >
-          Map Box
-        </div>,
-        <div
-          id="photo-gallery"
-        >
-          <div
-            id="photo1"
-          >
-            <img
-              alt="Could be portrait or landscape"
-              className="default photo"
-              id="img1"
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              src=""
-            />
-          </div>
-          <div
-            id="photo2"
-          >
-            <img
-              alt="Could be portrait or landscape"
-              className="selected photo"
-              id="img2"
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              src=""
-            />
-          </div>
-          <div
-            id="photo3"
-          >
-            <span
-              className="centered"
-            >
-              See All Photos
-            </span>
-            <img
-              alt="Could be portrait or landscape"
-              className="default photo"
-              id="img3"
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              src=""
-            />
-          </div>
-        </div>,
-      ],
-      "id": "top",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Map Box",
-          "id": "map",
-        },
-        "ref": null,
-        "rendered": "Map Box",
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              id="photo1"
-            >
-              <img
-                alt="Could be portrait or landscape"
-                className="default photo"
-                id="img1"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                src=""
-              />
-            </div>,
-            <div
-              id="photo2"
-            >
-              <img
-                alt="Could be portrait or landscape"
-                className="selected photo"
-                id="img2"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                src=""
-              />
-            </div>,
-            <div
-              id="photo3"
-            >
-              <span
-                className="centered"
-              >
-                See All Photos
-              </span>
-              <img
-                alt="Could be portrait or landscape"
-                className="default photo"
-                id="img3"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                src=""
-              />
-            </div>,
-          ],
-          "id": "photo-gallery",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <img
-                alt="Could be portrait or landscape"
-                className="default photo"
-                id="img1"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                src=""
-              />,
-              "id": "photo1",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "alt": "Could be portrait or landscape",
-                "className": "default photo",
-                "id": "img1",
-                "onClick": [Function],
-                "onMouseEnter": [Function],
-                "onMouseLeave": [Function],
-                "src": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <img
-                alt="Could be portrait or landscape"
-                className="selected photo"
-                id="img2"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                src=""
-              />,
-              "id": "photo2",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "alt": "Could be portrait or landscape",
-                "className": "selected photo",
-                "id": "img2",
-                "onClick": [Function],
-                "onMouseEnter": [Function],
-                "onMouseLeave": [Function],
-                "src": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span
-                  className="centered"
-                >
-                  See All Photos
-                </span>,
-                <img
-                  alt="Could be portrait or landscape"
-                  className="default photo"
-                  id="img3"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  src=""
-                />,
-              ],
-              "id": "photo3",
-            },
-            "ref": null,
-            "rendered": Array [
+          <img
+            alt="mapIMG"
+            id="mapIMG"
+            src={
               Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "See All Photos",
-                  "className": "centered",
-                },
-                "ref": null,
-                "rendered": "See All Photos",
-                "type": "span",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "Could be portrait or landscape",
-                  "className": "default photo",
-                  "id": "img3",
-                  "onClick": [Function],
-                  "onMouseEnter": [Function],
-                  "onMouseLeave": [Function],
-                  "src": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
-              },
-            ],
-            "type": "div",
-          },
-        ],
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <div
-            id="map"
-          >
-            Map Box
-          </div>,
+                "process": [Function],
+              }
+            }
+          />
           <div
             id="photo-gallery"
           >
@@ -323,9 +72,22 @@ ShallowWrapper {
               id="photo3"
             >
               <span
-                className="centered"
+                className="centered shadow"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
               >
-                See All Photos
+                <img
+                  alt="squares"
+                  id="squares"
+                  src={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
+                />
+                <br />
+                See All 3
               </span>
               <img
                 alt="Could be portrait or landscape"
@@ -337,30 +99,46 @@ ShallowWrapper {
                 src=""
               />
             </div>
-          </div>,
-        ],
-        "id": "top",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Map Box",
-            "id": "map",
+          </div>
+        </div>,
+      ],
+      "id": "topshelf",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "Searchbar",
+          "id": "searchbar",
+          "src": Object {
+            "process": [Function],
           },
-          "ref": null,
-          "rendered": "Map Box",
-          "type": "div",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="mapIMG"
+              id="mapIMG"
+              src={
+                Object {
+                  "process": [Function],
+                }
+              }
+            />,
+            <div
+              id="photo-gallery"
+            >
               <div
                 id="photo1"
               >
@@ -373,7 +151,7 @@ ShallowWrapper {
                   onMouseLeave={[Function]}
                   src=""
                 />
-              </div>,
+              </div>
               <div
                 id="photo2"
               >
@@ -386,14 +164,27 @@ ShallowWrapper {
                   onMouseLeave={[Function]}
                   src=""
                 />
-              </div>,
+              </div>
               <div
                 id="photo3"
               >
                 <span
-                  className="centered"
+                  className="centered shadow"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
                 >
-                  See All Photos
+                  <img
+                    alt="squares"
+                    id="squares"
+                    src={
+                      Object {
+                        "process": [Function],
+                      }
+                    }
+                  />
+                  <br />
+                  See All 3
                 </span>
                 <img
                   alt="Could be portrait or landscape"
@@ -404,95 +195,81 @@ ShallowWrapper {
                   onMouseLeave={[Function]}
                   src=""
                 />
-              </div>,
-            ],
-            "id": "photo-gallery",
+              </div>
+            </div>,
+          ],
+          "id": "top",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "mapIMG",
+              "id": "mapIMG",
+              "src": Object {
+                "process": [Function],
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
           },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <img
-                  alt="Could be portrait or landscape"
-                  className="default photo"
-                  id="img1"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  src=""
-                />,
-                "id": "photo1",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "Could be portrait or landscape",
-                  "className": "default photo",
-                  "id": "img1",
-                  "onClick": [Function],
-                  "onMouseEnter": [Function],
-                  "onMouseLeave": [Function],
-                  "src": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
-              },
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <img
-                  alt="Could be portrait or landscape"
-                  className="selected photo"
-                  id="img2"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  src=""
-                />,
-                "id": "photo2",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "Could be portrait or landscape",
-                  "className": "selected photo",
-                  "id": "img2",
-                  "onClick": [Function],
-                  "onMouseEnter": [Function],
-                  "onMouseLeave": [Function],
-                  "src": "",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
-              },
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  id="photo1"
+                >
+                  <img
+                    alt="Could be portrait or landscape"
+                    className="default photo"
+                    id="img1"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    src=""
+                  />
+                </div>,
+                <div
+                  id="photo2"
+                >
+                  <img
+                    alt="Could be portrait or landscape"
+                    className="selected photo"
+                    id="img2"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    src=""
+                  />
+                </div>,
+                <div
+                  id="photo3"
+                >
                   <span
-                    className="centered"
+                    className="centered shadow"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
                   >
-                    See All Photos
-                  </span>,
+                    <img
+                      alt="squares"
+                      id="squares"
+                      src={
+                        Object {
+                          "process": [Function],
+                        }
+                      }
+                    />
+                    <br />
+                    See All 3
+                  </span>
                   <img
                     alt="Could be portrait or landscape"
                     className="default photo"
@@ -501,32 +278,80 @@ ShallowWrapper {
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     src=""
-                  />,
-                ],
-                "id": "photo3",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "See All Photos",
-                    "className": "centered",
-                  },
-                  "ref": null,
-                  "rendered": "See All Photos",
-                  "type": "span",
+                  />
+                </div>,
+              ],
+              "id": "photo-gallery",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <img
+                      alt="Could be portrait or landscape"
+                      className="default photo"
+                      id="img1"
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      src=""
+                    />,
+                    false,
+                  ],
+                  "id": "photo1",
                 },
-                Object {
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Could be portrait or landscape",
+                      "className": "default photo",
+                      "id": "img1",
+                      "onClick": [Function],
+                      "onMouseEnter": [Function],
+                      "onMouseLeave": [Function],
+                      "src": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  false,
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <img
+                    alt="Could be portrait or landscape"
+                    className="selected photo"
+                    id="img2"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    src=""
+                  />,
+                  "id": "photo2",
+                },
+                "ref": null,
+                "rendered": Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "alt": "Could be portrait or landscape",
-                    "className": "default photo",
-                    "id": "img3",
+                    "className": "selected photo",
+                    "id": "img2",
                     "onClick": [Function],
                     "onMouseEnter": [Function],
                     "onMouseLeave": [Function],
@@ -535,6 +360,591 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": null,
                   "type": "img",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span
+                      className="centered shadow"
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                    >
+                      <img
+                        alt="squares"
+                        id="squares"
+                        src={
+                          Object {
+                            "process": [Function],
+                          }
+                        }
+                      />
+                      <br />
+                      See All 3
+                    </span>,
+                    <img
+                      alt="Could be portrait or landscape"
+                      className="default photo"
+                      id="img3"
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      src=""
+                    />,
+                  ],
+                  "id": "photo3",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <img
+                          alt="squares"
+                          id="squares"
+                          src={
+                            Object {
+                              "process": [Function],
+                            }
+                          }
+                        />,
+                        <br />,
+                        "See All 3",
+                      ],
+                      "className": "centered shadow",
+                      "onClick": [Function],
+                      "onMouseEnter": [Function],
+                      "onMouseLeave": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "alt": "squares",
+                          "id": "squares",
+                          "src": Object {
+                            "process": [Function],
+                          },
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {},
+                        "ref": null,
+                        "rendered": null,
+                        "type": "br",
+                      },
+                      "See All 3",
+                    ],
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Could be portrait or landscape",
+                      "className": "default photo",
+                      "id": "img3",
+                      "onClick": [Function],
+                      "onMouseEnter": [Function],
+                      "onMouseLeave": [Function],
+                      "src": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            alt="Searchbar"
+            id="searchbar"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />,
+          <div
+            id="top"
+          >
+            <img
+              alt="mapIMG"
+              id="mapIMG"
+              src={
+                Object {
+                  "process": [Function],
+                }
+              }
+            />
+            <div
+              id="photo-gallery"
+            >
+              <div
+                id="photo1"
+              >
+                <img
+                  alt="Could be portrait or landscape"
+                  className="default photo"
+                  id="img1"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  src=""
+                />
+              </div>
+              <div
+                id="photo2"
+              >
+                <img
+                  alt="Could be portrait or landscape"
+                  className="selected photo"
+                  id="img2"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  src=""
+                />
+              </div>
+              <div
+                id="photo3"
+              >
+                <span
+                  className="centered shadow"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                >
+                  <img
+                    alt="squares"
+                    id="squares"
+                    src={
+                      Object {
+                        "process": [Function],
+                      }
+                    }
+                  />
+                  <br />
+                  See All 3
+                </span>
+                <img
+                  alt="Could be portrait or landscape"
+                  className="default photo"
+                  id="img3"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  src=""
+                />
+              </div>
+            </div>
+          </div>,
+        ],
+        "id": "topshelf",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Searchbar",
+            "id": "searchbar",
+            "src": Object {
+              "process": [Function],
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="mapIMG"
+                id="mapIMG"
+                src={
+                  Object {
+                    "process": [Function],
+                  }
+                }
+              />,
+              <div
+                id="photo-gallery"
+              >
+                <div
+                  id="photo1"
+                >
+                  <img
+                    alt="Could be portrait or landscape"
+                    className="default photo"
+                    id="img1"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    src=""
+                  />
+                </div>
+                <div
+                  id="photo2"
+                >
+                  <img
+                    alt="Could be portrait or landscape"
+                    className="selected photo"
+                    id="img2"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    src=""
+                  />
+                </div>
+                <div
+                  id="photo3"
+                >
+                  <span
+                    className="centered shadow"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                  >
+                    <img
+                      alt="squares"
+                      id="squares"
+                      src={
+                        Object {
+                          "process": [Function],
+                        }
+                      }
+                    />
+                    <br />
+                    See All 3
+                  </span>
+                  <img
+                    alt="Could be portrait or landscape"
+                    className="default photo"
+                    id="img3"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    src=""
+                  />
+                </div>
+              </div>,
+            ],
+            "id": "top",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "mapIMG",
+                "id": "mapIMG",
+                "src": Object {
+                  "process": [Function],
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    id="photo1"
+                  >
+                    <img
+                      alt="Could be portrait or landscape"
+                      className="default photo"
+                      id="img1"
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      src=""
+                    />
+                  </div>,
+                  <div
+                    id="photo2"
+                  >
+                    <img
+                      alt="Could be portrait or landscape"
+                      className="selected photo"
+                      id="img2"
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      src=""
+                    />
+                  </div>,
+                  <div
+                    id="photo3"
+                  >
+                    <span
+                      className="centered shadow"
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                    >
+                      <img
+                        alt="squares"
+                        id="squares"
+                        src={
+                          Object {
+                            "process": [Function],
+                          }
+                        }
+                      />
+                      <br />
+                      See All 3
+                    </span>
+                    <img
+                      alt="Could be portrait or landscape"
+                      className="default photo"
+                      id="img3"
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      src=""
+                    />
+                  </div>,
+                ],
+                "id": "photo-gallery",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <img
+                        alt="Could be portrait or landscape"
+                        className="default photo"
+                        id="img1"
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        src=""
+                      />,
+                      false,
+                    ],
+                    "id": "photo1",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "Could be portrait or landscape",
+                        "className": "default photo",
+                        "id": "img1",
+                        "onClick": [Function],
+                        "onMouseEnter": [Function],
+                        "onMouseLeave": [Function],
+                        "src": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    false,
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <img
+                      alt="Could be portrait or landscape"
+                      className="selected photo"
+                      id="img2"
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      src=""
+                    />,
+                    "id": "photo2",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Could be portrait or landscape",
+                      "className": "selected photo",
+                      "id": "img2",
+                      "onClick": [Function],
+                      "onMouseEnter": [Function],
+                      "onMouseLeave": [Function],
+                      "src": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span
+                        className="centered shadow"
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                      >
+                        <img
+                          alt="squares"
+                          id="squares"
+                          src={
+                            Object {
+                              "process": [Function],
+                            }
+                          }
+                        />
+                        <br />
+                        See All 3
+                      </span>,
+                      <img
+                        alt="Could be portrait or landscape"
+                        className="default photo"
+                        id="img3"
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        src=""
+                      />,
+                    ],
+                    "id": "photo3",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <img
+                            alt="squares"
+                            id="squares"
+                            src={
+                              Object {
+                                "process": [Function],
+                              }
+                            }
+                          />,
+                          <br />,
+                          "See All 3",
+                        ],
+                        "className": "centered shadow",
+                        "onClick": [Function],
+                        "onMouseEnter": [Function],
+                        "onMouseLeave": [Function],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "alt": "squares",
+                            "id": "squares",
+                            "src": Object {
+                              "process": [Function],
+                            },
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "img",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {},
+                          "ref": null,
+                          "rendered": null,
+                          "type": "br",
+                        },
+                        "See All 3",
+                      ],
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "Could be portrait or landscape",
+                        "className": "default photo",
+                        "id": "img3",
+                        "onClick": [Function],
+                        "onMouseEnter": [Function],
+                        "onMouseLeave": [Function],
+                        "src": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                  ],
+                  "type": "div",
                 },
               ],
               "type": "div",
