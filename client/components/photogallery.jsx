@@ -1,10 +1,6 @@
 import React from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
-import searchBarIMG from '../../public/StaticSearch.png';
-import mapIMG from '../../public/StaticMap.png';
-import squares from '../../public/4squares.jpg';
-
 
 const $ = require('jquery');
 
@@ -41,13 +37,13 @@ class PhotoGallery extends React.Component {
       <div id="topshelf">
         <img
           id="searchbar"
-          src={searchBarIMG}
+          src="https://s3.ap-northeast-2.amazonaws.com/pleyland/StaticSearch.png"
           alt="Searchbar"
         />
         <div id="top">
           <img
             id="mapIMG"
-            src={mapIMG}
+            src="https://s3.ap-northeast-2.amazonaws.com/pleyland/StaticMap.png"
             alt="mapIMG"
           />
           <div id="photo-gallery">
@@ -80,21 +76,23 @@ class PhotoGallery extends React.Component {
                 alt=""
               />
               {isOpen && (
-                <Lightbox
-                  className="default photo"
-                  mainSrc={images[photoIndex]}
-                  nextSrc={images[(photoIndex + 1) % images.length]}
-                  prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-                  onCloseRequest={() => this.setState({ isOpen: false })}
-                  onMovePrevRequest={() => this.setState({
-                    photoIndex: (photoIndex + images.length - 1) % images.length,
-                  })
-                  }
-                  onMoveNextRequest={() => this.setState({
-                    photoIndex: (photoIndex + 1) % images.length,
-                  })
-                  }
-                />
+                <div id="lightbox-wrapper">
+                  <Lightbox
+                    className="default photo"
+                    mainSrc={images[photoIndex]}
+                    nextSrc={images[(photoIndex + 1) % images.length]}
+                    prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                    onCloseRequest={() => this.setState({ isOpen: false })}
+                    onMovePrevRequest={() => this.setState({
+                      photoIndex: (photoIndex + images.length - 1) % images.length,
+                    })
+                    }
+                    onMoveNextRequest={() => this.setState({
+                      photoIndex: (photoIndex + 1) % images.length,
+                    })
+                    }
+                  />
+                </div>
               )}
             </div>
             <div id="photo2">
@@ -153,7 +151,7 @@ class PhotoGallery extends React.Component {
               >
                 <img
                   id="squares"
-                  src={squares}
+                  src="https://s3.ap-northeast-2.amazonaws.com/pleyland/4squares.jpg"
                   alt="squares"
                 />
                 <br />

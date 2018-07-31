@@ -7,7 +7,7 @@ const app = express();
 app.use('/', express.static('public'));
 
 app.get('/biz/:restaurant', (req, res) => {
-  console.log(req.params);
+  // console.log(req.params);
   db.getPictures(req.params.restaurant, res);
 });
 

@@ -37,9 +37,11 @@ describe('PhotoGallery Test Suite', () => {
 
     // Testing Initial State
     // console.log(wrapper.find('#img1'));
-    //.simulate('onMouseEnter');
+    // .simulate('onMouseEnter');
     // Testing state after mouseleave
 
     // Testing state after mouseover
+    const wrap = mount(<PhotoGallery />);
+    expect(wrap).toMatchSnapshot();
   });
 });
