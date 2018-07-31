@@ -34,8 +34,8 @@ jobs:
             - node_modules
       - run: sudo apt install -y mysql-client
       - run: mysql -h 127.0.0.1 -u root < ./db/schema.sql
-      - run:
-          command: node ./server/server.js
-          background: true
+      # - run:
+          # command: node ./server/server.js
+          # background: true
 
       - run: npm test -- -u
