@@ -22,8 +22,8 @@ class PhotoGallery extends React.Component {
 
   render() {
     const { photoIndex, isOpen } = this.state;
-
-    $.get('http://localhost:3005/biz/Ippudo', (data) => {
+    console.log('gallery', this.props.restaurantid);
+    $.get(`http://localhost:3005/biz/${this.props.restaurantid}`, (data) => {
       images = [];
       data.forEach((element, index) => {
         $(`#img${index + 1}`).attr('src', element.url);
@@ -139,7 +139,7 @@ class PhotoGallery extends React.Component {
               >
                 <img
                   id="squares"
-                  src="https://s3.ap-northeast-2.amazonaws.com/pleyland/4squares.jpg"
+                  src="https://s3-us-west-1.amazonaws.com/pley-land/4squares.jpg"
                   alt="squares"
                 />
                 <br />

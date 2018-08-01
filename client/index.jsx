@@ -2,4 +2,5 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PhotoGallery from './components/photogallery';
 
-ReactDOM.render(<PhotoGallery />, document.getElementById('gallery'));
+const restName = location.pathname.slice(5, location.pathname.length - 1);
+ReactDOM.render(<PhotoGallery restaurantid={restName}/>, document.getElementById('gallery'));
