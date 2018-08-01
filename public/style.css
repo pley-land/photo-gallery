@@ -18,11 +18,11 @@
     height: 21px;
 }
 
-#topshelf {
+/*#topshelf {
     display: flex;
     justify-content: center;
     flex-direction: column
-}
+}*/
 
 #searchbar {
     width: 1200px;
@@ -40,16 +40,19 @@
   	align-items: center;
 }
 
-#map {
+/*#map {
     border-style: solid;
     border-color: red;
     height: 300px;
     width: 400px;
     text-align: center;
   	overflow: auto;
-}
+}*/
 
 #photo-gallery {
+    float: left;
+    margin-top: -245px;
+    margin-left: 302px;
 	display: flex;
     height: 220px;
     width: 690px;

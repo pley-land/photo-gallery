@@ -34,18 +34,6 @@ class PhotoGallery extends React.Component {
     });
 
     return (
-      <div id="topshelf">
-        <img
-          id="searchbar"
-          src="https://s3.ap-northeast-2.amazonaws.com/pleyland/StaticSearch.png"
-          alt="Searchbar"
-        />
-        <div id="top">
-          <img
-            id="mapIMG"
-            src="https://s3.ap-northeast-2.amazonaws.com/pleyland/StaticMap.png"
-            alt="mapIMG"
-          />
           <div id="photo-gallery">
             <div id="photo1">
               <img
@@ -186,8 +174,6 @@ class PhotoGallery extends React.Component {
               />
             </div>
           </div>
-        </div>
-      </div>
     );
   }
 }
