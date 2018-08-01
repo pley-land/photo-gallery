@@ -1,11 +1,11 @@
 -- mysql.server start
 -- mysql -u root < schema.sql
 
-DROP DATABASE IF EXISTS pley;
+DROP DATABASE IF EXISTS pleySteven;
 
-CREATE DATABASE pley;
+CREATE DATABASE pleySteven;
 
-USE pley;
+USE pleySteven;
 
 
 -- CREATE TABLE users (
