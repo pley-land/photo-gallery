@@ -22,7 +22,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon ./server/server.js",
+    "start": "node ./server/server.js",
     "webpack": "webpack",
     "test": "jest",
     "build": "webpack --mode production"

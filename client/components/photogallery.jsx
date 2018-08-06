@@ -23,14 +23,14 @@ class PhotoGallery extends React.Component {
   render() {
     const { photoIndex, isOpen } = this.state;
     console.log('gallery', this.props.restaurantid);
-    $.get(`http://localhost:3005/biz/${this.props.restaurantid}`, (data) => {
+    $.get(`http://18.191.113.50:3005/biz/${this.props.restaurantid}`, (data) => {
       images = [];
       data.forEach((element, index) => {
         $(`#img${index + 1}`).attr('src', element.url);
         images.push(element.url);
       });
     }).fail(() => {
-      console.log('error');
+      console.log('error getting photos');
     });
 
     return (
