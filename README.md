@@ -1,13 +1,12 @@
-# Project Name
+# Pleyted Photo Gallery
 
-> Project description
+> Photo Gallery Component for Pleyted Web App
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/pleyted/photo-gallery
+  - https://github.com/pleyted/review_list
+  - https://github.com/pleyted/anson-topshelf-service
 
 ## Table of Contents
 
@@ -17,14 +16,14 @@
 
 ## Usage
 
-> Some usage instructions
+> Photo Gallery Component of Pleyted Webb App
 
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
-- Node 6.13.0
-- etc
+- Node 6.13.1
+- MySQL 8.0.11
 
 ## Development
 
