@@ -12,6 +12,7 @@ class PhotoGallery extends React.Component {
     this.state = {
       photoIndex: 0,
       isOpen: false,
+      photos: [{ url: '' }, { url: '' }, { url: '' }],
     };
     this.onClickHandler = this.onClickHandler.bind(this);
   }
@@ -20,19 +21,18 @@ class PhotoGallery extends React.Component {
     this.setState({ isOpen: true });
   }
 
-  render() {
-    const { photoIndex, isOpen } = this.state;
-    console.log('gallery', this.props.restaurantid);
-    $.get(`http://18.191.113.50:3005/biz/${this.props.restaurantid}`, (data) => {
-      images = [];
-      data.forEach((element, index) => {
-        $(`#img${index + 1}`).attr('src', element.url);
-        images.push(element.url);
+  componentDidMount() {
+    $.get(`http://localhost:3005/biz/${this.props.restaurantid}`, (data) => {
+      this.setState({
+        photos: data,
       });
     }).fail(() => {
       console.log('error getting photos');
     });
+  }
 
+  render() {
+    const { photoIndex, isOpen } = this.state;
     return (
           <div id="photo-gallery">
             <div id="photo1">
@@ -40,27 +40,8 @@ class PhotoGallery extends React.Component {
                 id="img1"
                 className="default photo"
                 onClick={this.onClickHandler}
-                onMouseEnter={(e) => {
-                  if (e.target.nodeName === 'SPAN') {
-                    $('#img2').removeClass('selected');
-                    $('#img2').addClass('default');
-                    $('#img3').addClass('selected');
-                  } else {
-                    $('#img2').removeClass('selected');
-                    $('#img2').addClass('default');
-                    $(e.target).addClass('selected');
-                  }
-                }}
-                onMouseLeave={() => {
-                  $('#img2').addClass('selected');
-                  $('#img2').removeClass('default');
-                  $('#img3').removeClass('selected');
-                  $('#img3').addClass('default');
-                  $('#img1').removeClass('selected');
-                  $('#img1').addClass('default');
-                }}
                 onKeyDown={this.handleKeyDown}
-                src=""
+                src={this.state.photos[0].url}
                 alt=""
               />
               {isOpen && (
@@ -88,27 +69,8 @@ class PhotoGallery extends React.Component {
                 id="img2"
                 className="selected photo"
                 onClick={this.onClickHandler}
-                onMouseEnter={(e) => {
-                  if (e.target.nodeName === 'SPAN') {
-                    $('#img2').removeClass('selected');
-                    $('#img2').addClass('default');
-                    $('#img3').addClass('selected');
-                  } else {
-                    $('#img2').removeClass('selected');
-                    $('#img2').addClass('default');
-                    $(e.target).addClass('selected');
-                  }
-                }}
-                onMouseLeave={() => {
-                  $('#img2').addClass('selected');
-                  $('#img2').removeClass('default');
-                  $('#img3').removeClass('selected');
-                  $('#img3').addClass('default');
-                  $('#img1').removeClass('selected');
-                  $('#img1').addClass('default');
-                }}
                 onKeyDown={this.handleKeyDown}
-                src=""
+                src={this.state.photos[1].url}
                 alt=""
               />
             </div>
@@ -116,25 +78,6 @@ class PhotoGallery extends React.Component {
               <span
                 className="centered shadow"
                 onClick={this.onClickHandler}
-                onMouseEnter={(e) => {
-                  if (e.target.nodeName === 'SPAN') {
-                    $('#img2').removeClass('selected');
-                    $('#img2').addClass('default');
-                    $('#img3').addClass('selected');
-                  } else {
-                    $('#img2').removeClass('selected');
-                    $('#img2').addClass('default');
-                    $(e.target).addClass('selected');
-                  }
-                }}
-                onMouseLeave={() => {
-                  $('#img2').addClass('selected');
-                  $('#img2').removeClass('default');
-                  $('#img3').removeClass('selected');
-                  $('#img3').addClass('default');
-                  $('#img1').removeClass('selected');
-                  $('#img1').addClass('default');
-                }}
                 onKeyDown={this.handleKeyDown}
               >
                 <img
@@ -149,27 +92,8 @@ class PhotoGallery extends React.Component {
                 id="img3"
                 className="default photo"
                 onClick={this.onClickHandler}
-                onMouseEnter={(e) => {
-                  if (e.target.nodeName === 'SPAN') {
-                    $('#img2').removeClass('selected');
-                    $('#img2').addClass('default');
-                    $('#img3').addClass('selected');
-                  } else {
-                    $('#img2').removeClass('selected');
-                    $('#img2').addClass('default');
-                    $(e.target).addClass('selected');
-                  }
-                }}
-                onMouseLeave={() => {
-                  $('#img2').addClass('selected');
-                  $('#img2').removeClass('default');
-                  $('#img3').removeClass('selected');
-                  $('#img3').addClass('default');
-                  $('#img1').removeClass('selected');
-                  $('#img1').addClass('default');
-                }}
                 onKeyDown={this.handleKeyDown}
-                src=""
+                src={this.state.photos[2].url}
                 alt=""
               />
             </div>
